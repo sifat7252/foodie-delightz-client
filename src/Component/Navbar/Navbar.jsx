@@ -9,18 +9,23 @@ const Navbar = () => {
         </Link>
       </li>
       <li className="p-1 font-sans text-sm md:text-base lg:text-base text-black lg:font-semibold md:font-medium font-normal     text-transparent bg-clip-text   bg-gradient-to-r from-violet-500 to-blue-900">
-        <Link to={"/"} className="flex items-center">
+        <Link to={"/foods"} className="flex items-center">
           Foods
         </Link>
       </li>
       <li className="p-1 font-sans text-sm md:text-base lg:text-base text-black lg:font-semibold md:font-medium font-normal     text-transparent bg-clip-text   bg-gradient-to-r from-violet-500 to-blue-900">
-        <Link to={"/"} className="flex items-center">
+        <Link to={"/addProduct"} className="flex items-center">
           Add Product
+        </Link>
+      </li>
+      <li className="p-1 font-sans text-sm md:text-base lg:text-base text-black lg:font-semibold md:font-medium font-normal     text-transparent bg-clip-text   bg-gradient-to-r from-violet-500 to-blue-900">
+        <Link to={"/myCart"} className="flex items-center">
+          My Cart
         </Link>
       </li>
 
       <li className="p-1 font-sans text-sm md:text-base lg:text-base text-black lg:font-semibold md:font-medium font-normal     text-transparent bg-clip-text   bg-gradient-to-r from-violet-500 to-blue-900">
-        <Link to={"/"} className="flex items-center">
+        <Link to={"/register"} className="flex items-center">
           Register
         </Link>
       </li>
@@ -59,7 +64,7 @@ const Navbar = () => {
             <img
               src="https://i.ibb.co/BqrMv41/logo-no-background.png"
               alt=""
-              className="lg:h-20 h-14 p-2 relative "
+              className="lg:h-24 lg:w-28 h-14 p-2 relative "
             />
           </div>
           {/* <Link className="btn btn-ghost normal-case text-xl border-2 flex border-blue-600 -ml-9">daisyUI</Link> */}
@@ -81,7 +86,7 @@ const Navbar = () => {
             </div>
           </div>
           <div className="flex justify-end ">
-            <Link className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+            <Link to={'/login'} className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
               Log in
             </Link>
           </div>
