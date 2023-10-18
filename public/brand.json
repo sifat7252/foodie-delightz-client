@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "image": "https://i.ibb.co/4PnMf8Q/Coke-products-874x440.jpg",
+        "name": "Beverages",
+        "author_name": "Alice Smith",
+        "author_image": "https://i.ibb.co/H2sb7Qv/teacher6.jpg",
+        "professions": "Food Blogger",
+        "comment": "The sushi at this place is simply amazing. The freshness of the fish and the presentation are top-notch. I keep coming back for more!"
+    },
+    {
+        "id": 2,
+        "image": "https://i.ibb.co/9GY0vDZ/download.jpg",
+        "name": "French Fries",
+        "author_name": "John Doe",
+        "author_image": "https://i.ibb.co/pwjvP5w/teacher5.jpg",
+        "professions": "Chef",
+        "comment": "I've tried the Chicken Alfredo here, and it's a masterpiece. The creamy sauce and perfectly cooked chicken make it a must-try dish."
+    },
+    {
+        "id": 3,
+        "image": "https://i.ibb.co/ZcKMhDY/download.jpg",
+        "name": "Tea & Coffees",
+        "author_name": "Emily Johnson",
+        "author_image": "https://i.ibb.co/9pdZ2d7/teacher2.jpg",
+        "professions": "Food Critic",
+        "comment": "This place serves the best iced coffee in town. It's refreshing, not too sweet, and the coffee flavor is just perfect."
+    },
+    {
+        "id": 4,
+        "image": "https://i.ibb.co/5hfdJDX/80752819.webp",
+        "name": "Chocolates",
+        "author_name": "Mark Davis",
+        "author_image": "https://i.ibb.co/q0F8ThW/teacher4.jpg",
+        "professions": "Mixologist",
+        "comment": "The Classic Margarita here is an absolute delight. Perfectly balanced with just the right amount of zing. I highly recommend it."
+    },
+    {
+        "id": 5,
+        "image": "https://i.ibb.co/k9bsc8g/maxresdefault.jpg",
+        "name": "Chicken Fries",
+        "author_name": "Olivia White",
+        "author_image": "https://i.ibb.co/mGwwpmJ/teacher3.jpg",
+        "professions": "Nutritionist",
+        "comment": "The vegetable stir-fry is a healthy choice, and it tastes as good as it looks. Packed with fresh veggies and flavor. A great choice for health-conscious diners."
+    },
+    {
+        "id": 6,
+        "image": "https://i.ibb.co/LzSCLMK/w0714a16207251033667-thumb.jpg",
+        "name": "Healthy Foods",
+        "author_name": "Martin Park",
+        "author_image": "https://i.ibb.co/H2XwySL/teacher1.jpg",
+        "professions": "Food Blogger",
+        "comment": "The sushi at this place is simply amazing. The freshness of the fish and the presentation are top-notch. I keep coming back for more!"
+    }
+]
