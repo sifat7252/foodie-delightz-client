@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from 'react-icons/fa';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link } from "react-router-dom";
 
 
@@ -14,13 +14,15 @@ const Register = () => {
         const photoUrl = form.photoUrl.value;
         const email = form.email.value;
         const password = form.password.value;
-        const accepted = form.checkbox.checked;
+        // const accepted = form.checkbox.checked;
         console.log(name, photoUrl, email, password )
     }
     return (
         <div>
             <div className="flex justify-center items-center mt-8 mx-10">
-      <div className="relative flex flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-lg p-8 ">
+      <div className="relative flex flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-lg p-8 " data-aos="flip-right"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="1000">
       <div className="flex justify-center items-center"><img src="https://i.ibb.co/BqrMv41/logo-no-background.png" alt="" className="h-20 " /></div>
         <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-900 antialiased">
           Register
