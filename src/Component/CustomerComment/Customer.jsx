@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 const Customer = ({customer}) => {
-    console.log(customer)
+    // console.log(customer)
     return (
         <div>
             <div className="bg-sky-100 mx-10 lg:mx-3 p-5 lg:p-8 rounded-xl shadow-lg">
