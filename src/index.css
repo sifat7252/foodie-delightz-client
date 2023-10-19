@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.bg-image1 {
+    background-image: url(https://i.ibb.co/9N7MGSc/photo-1504754524776-8f4f37790ca0-auto-format-fit-max-q-80-blend-000000-blend-alpha-10-blend-mode-nor.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.bg-image2 {
+    background-image: url(https://i.ibb.co/WyyTyVX/photo-1611688370466-0e415a5c922e-auto-format-fit-max-q-80-blend-000000-blend-alpha-10-blend-mode-nor.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.bg-image3 {
+    background-image: url(https://i.ibb.co/0ZDLhm6/photo-1526016650454-68a6f488910a-auto-format-fit-max-q-80-blend-000000-blend-alpha-10-blend-mode-nor.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.bg-image4 {
+    background-image: url(https://i.ibb.co/k375hPP/photo-1509456592530-5d38e33f3fdd-auto-format-fit-max-q-80-blend-000000-blend-alpha-10-blend-mode-nor.jpg);
+    background-position: center;
+    background-size: cover;
+}

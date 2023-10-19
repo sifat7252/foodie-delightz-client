@@ -1,3 +1,5 @@
+import Banner from "../../Component/Banner/Banner";
+import SearchBanner from "../../Component/Banner/SearchBanner";
 import Brands from "../../Component/Brands/Brands";
 import CustomerComments from "../../Component/CustomerComment/CustomerComments";
 import FoodBrand from "../../Component/FoodsBrand/FoodBrand";
@@ -7,7 +9,8 @@ import Suggestions from "../../Component/Suggestions/Suggestions";
 const Home = () => {
     return (
         <div>
-            <h2>this is home</h2>
+            <SearchBanner></SearchBanner>
+            <Banner></Banner>
             <Brands></Brands>
             <Suggestions></Suggestions>
             <FoodBrand></FoodBrand>
