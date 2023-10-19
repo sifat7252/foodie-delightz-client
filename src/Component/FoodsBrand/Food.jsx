@@ -8,6 +8,7 @@ const Food = ({ food }) => {
       <div
         className="card  lg:mx-5 h-40 bg-base-100 shadow-xl image-full "
         data-aos="zoom-in"
+        data-aos-duration="1000"
       >
         <figure>
           <img src={food.image} alt="brand" className="w-full" />
