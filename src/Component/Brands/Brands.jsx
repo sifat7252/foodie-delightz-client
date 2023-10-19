@@ -11,7 +11,7 @@ const Brands = () => {
       console.log(brands);
     return (
         <div>
-            <div>
+            <div className='mb-5'>
         <div className=" flex flex-col items-center justify-center item-center mx-auto ">
           <h2
             className="font-semibold lg:text-5xl text-xl md:text-4xl text-transparent bg-clip-text   bg-gradient-to-r from-blue-900 to-blue-500 lg:my-4 p-3"

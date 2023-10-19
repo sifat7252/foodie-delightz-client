@@ -57,9 +57,18 @@ const AddProductPage = () => {
      data-aos-duration="500">
                             <span className="label-text font-medium text-lg italic">Brand Name</span>
                         </label>
-                        <label className="input-group">
+                        <select name="brandName" id="brandName" className=" text-gray-800 px-3 py-1 input input-bordered w-full">
+                                <option value="Select">Select</option>
+                                <option value="Coca-Cola">Coca-Cola</option>
+                                <option value="McDonald's">McDonalds</option>
+                                <option value="Starbucks">Starbucks</option>
+                                <option value="Nestlé">Nestlé</option>
+                                <option value="Kellogg's">Kelloggs</option>
+                                <option value="KFC">KFC</option>
+                            </select>
+                        {/* <label className="input-group">
                             <input type="text" name="brandName" placeholder="Brand Name" required className="input input-bordered w-full" />
-                        </label>
+                        </label> */}
                     </div>
                     <div className="form-control md:w-1/2 ml-4">
                         <label className="label" data-aos="fade-left"
@@ -68,9 +77,18 @@ const AddProductPage = () => {
      data-aos-duration="500">
                             <span className="label-text font-medium text-lg italic">Product Type</span>
                         </label>
-                        <label className="input-group">
-                            <input type="text" name="productType" placeholder="Product Type" required className="input input-bordered w-full" />
-                        </label>
+                        
+                            <select name="productType" id="productType" className=" text-gray-800 px-3 py-1 input input-bordered w-full">
+                                <option value="Select">Select</option>
+                                <option value="Beverages">Beverages</option>
+                                <option value="French Fries">French Fries</option>
+                                <option value="Tea & Coffees">Tea & Coffees</option>
+                                <option value="Chocolates">Chocolates</option>
+                                <option value="Chicken Fries">Chicken Fries</option>
+                                <option value="Healthy Foods">Healthy Foods</option>
+                            </select>
+                            {/* <input type="text" name="productType" placeholder="Product Type" required className="input input-bordered w-full" /> */}
+                        
                     </div>
                 </div>
                 {/* PRODUCT PRICE & RATING */}

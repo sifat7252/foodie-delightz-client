@@ -63,7 +63,7 @@ const Navbar = () => {
           <div className=" flex justify-center  item-center lg:mr-80 ">
             <img
               src="https://i.ibb.co/BqrMv41/logo-no-background.png"
-              alt=""
+              alt="logo"
               className="lg:h-24 lg:w-28 h-14 p-2 relative "
             />
           </div>
