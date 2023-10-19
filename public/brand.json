@@ -1,6 +1,8 @@
 [
     {
         "id": 1,
+        "brand_name": "Coca-Cola",
+        "brand_image": "https://i.ibb.co/mBJ9N3X/coca-cola-04-1496399950.jpg",
         "image": "https://i.ibb.co/4PnMf8Q/Coke-products-874x440.jpg",
         "name": "Beverages",
         "author_name": "Alice Smith",
@@ -10,6 +12,8 @@
     },
     {
         "id": 2,
+        "brand_name": "McDonald's",
+        "brand_image": "https://i.ibb.co/BjNRFyF/Mc-Donald-s-logo-svg.png",
         "image": "https://i.ibb.co/9GY0vDZ/download.jpg",
         "name": "French Fries",
         "author_name": "John Doe",
@@ -19,6 +23,8 @@
     },
     {
         "id": 3,
+        "brand_name": "Starbucks",
+        "brand_image": "https://i.ibb.co/t2LcQsD/download.jpg",
         "image": "https://i.ibb.co/ZcKMhDY/download.jpg",
         "name": "Tea & Coffees",
         "author_name": "Emily Johnson",
@@ -28,6 +34,8 @@
     },
     {
         "id": 4,
+        "brand_name": "Nestlé",
+        "brand_image": "https://i.ibb.co/cCQ1PfF/download.png",
         "image": "https://i.ibb.co/5hfdJDX/80752819.webp",
         "name": "Chocolates",
         "author_name": "Mark Davis",
@@ -37,6 +45,8 @@
     },
     {
         "id": 5,
+        "brand_name": "Kellogg's",
+        "brand_image": "https://i.ibb.co/x50jzxB/2560px-Kellogg-s-Logo-svg.png",
         "image": "https://i.ibb.co/k9bsc8g/maxresdefault.jpg",
         "name": "Chicken Fries",
         "author_name": "Olivia White",
@@ -46,6 +56,8 @@
     },
     {
         "id": 6,
+        "brand_name": "KFC",
+        "brand_image": "https://i.ibb.co/mz6YJQQ/download.png",
         "image": "https://i.ibb.co/LzSCLMK/w0714a16207251033667-thumb.jpg",
         "name": "Healthy Foods",
         "author_name": "Martin Park",

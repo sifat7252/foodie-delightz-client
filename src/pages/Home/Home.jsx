@@ -1,3 +1,4 @@
+import Brands from "../../Component/Brands/Brands";
 import CustomerComments from "../../Component/CustomerComment/CustomerComments";
 import FoodBrand from "../../Component/FoodsBrand/FoodBrand";
 
@@ -6,6 +7,7 @@ const Home = () => {
     return (
         <div>
             <h2>this is home</h2>
+            <Brands></Brands>
             <FoodBrand></FoodBrand>
             <CustomerComments></CustomerComments>
         </div>
