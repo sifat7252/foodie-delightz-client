@@ -8,7 +8,7 @@ const Brands = () => {
           .then((res) => res.json())
           .then((data) => setBrands(data));
       }, []);
-      console.log(brands);
+      // console.log(brands);
     return (
         <div>
             <div className='mb-5'>
@@ -24,7 +24,7 @@ const Brands = () => {
           </h2>
 
           <h2
-            className="text-xs lg:text-sm md:text-2xl mt-2 mb-6 font-semibold text-slate-300"
+            className="text-xs lg:text-lg md:text-2xl mt-2 mb-6 font-semibold text-slate-300"
             data-aos="fade-right"
             data-aos-anchor="#example-anchor"
             data-aos-offset="500"

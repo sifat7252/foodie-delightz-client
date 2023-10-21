@@ -1,10 +1,16 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link } from "react-router-dom";
-
+import { AuthContext } from "../../Providers/AuthProvider";
+import swal from "sweetalert";
 
 const Register = () => {
+  // const {createUser} = useContext(AuthContext);
     const [showPasswordIcon, setShowPasswordIcon] = useState(false);
+    
+    const [registerError, setRegisterError] = useState("");
+    const [successMessage, setSuccessMessage] = useState("");
+    
     
 
     const handleRegister = e =>{
@@ -14,8 +20,43 @@ const Register = () => {
         const photoUrl = form.photoUrl.value;
         const email = form.email.value;
         const password = form.password.value;
-        // const accepted = form.checkbox.checked;
-        console.log(name, photoUrl, email, password )
+        const accepted = form.checkbox.checked;
+        const registerUser = {name, photoUrl, email, password}
+        console.log( registerUser)
+
+        // ::: CONDITIONS FOR PASSWORD LENGTH , UPPERCASE-LOWERCASE , AND CHECKED TICKED ::::
+
+        if (password.length < 6) {
+          setRegisterError("Password should be At least 6 character");
+          swal("Opps !!", registerError, "error");
+          return;    
+        }
+        else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/.test(password)) {
+          setRegisterError("Password Should at least one Uppercase, lowercase and number");
+          swal("Opps !!", registerError, "error");
+          return;
+        } 
+        else if (!accepted) {
+          setRegisterError("You must be checked out term and policies");
+          swal("Opps !!", registerError, "error");
+          return;
+        }
+
+        // :: CREATING NEW USER WITH EMAIL AND PASSWORD ::
+        createUser(email, password)
+        .then(result => {
+          setSuccessMessage("New User Created Successfully")
+          console.log(result.user)
+          swal("Congratulation !!", successMessage , "success");
+        })
+        .catch(error =>{
+          console.error(error)
+          setRegisterError(error.message);
+          swal("Opps !!", registerError, "error");
+        })
+
+
+
     }
     return (
         <div>

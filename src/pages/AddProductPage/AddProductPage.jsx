@@ -1,4 +1,4 @@
-
+import Swal from 'sweetalert2'
 
 const AddProductPage = () => {
     
@@ -12,7 +12,31 @@ const AddProductPage = () => {
         const productPrice = form.productPrice.value;
         const rating = form.rating.value;
         const productDescription = form.productDescription.value;
-        console.log(productName, productImage, brandName, productType, productPrice, rating, productDescription)
+        const newProduct = {productName, productImage, brandName, productType, productPrice, rating, productDescription}
+        console.log(newProduct)
+
+        // ::: SENDING PRODUCT DATA TO SERVER SITE :::
+        fetch('http://localhost:5000/product', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newProduct)
+        })
+        .then(res=> res.json())
+        .then(data => {
+            console.log(data)
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'Success',
+                    text: 'Product added successfully.',
+                    icon: 'success',
+                    confirmButtonText: 'Okay'
+
+                })
+                form.reset();
+            }
+        })
         
     }
     return (
@@ -101,7 +125,7 @@ const AddProductPage = () => {
                             <span className="label-text font-medium text-lg italic">Product Price </span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="productPrice" placeholder="Product Price" required className="input input-bordered w-full" />
+                            <input type="number" name="productPrice" placeholder="Product Price" required className="input input-bordered w-full" />
                         </label>
                     </div>
                     <div className="form-control md:w-1/2 ml-4">
@@ -112,7 +136,7 @@ const AddProductPage = () => {
                             <span className="label-text font-medium text-lg italic">Rating</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="rating" placeholder="Rating" required className="input input-bordered w-full" />
+                            <input type="number" name="rating" placeholder="Rating" required className="input input-bordered w-full" />
                         </label>
                     </div>
                 </div>

@@ -15,7 +15,7 @@ const Suggestions = () => {
           </h2>
 
           <h2
-            className="text-xs lg:text-base md:text-base mt-2 mb-6 font-semibold text-slate-300"
+            className="text-xs lg:text-lg md:text-base mt-2 mb-6 font-semibold text-slate-300"
             data-aos="fade-right"
             data-aos-anchor="#example-anchor"
             data-aos-offset="500"

@@ -20,7 +20,7 @@ const Food = ({ food }) => {
           data-aos-offset="500"
           data-aos-duration="1500"
         >
-          <Link >
+          <Link to={food.id}>
             <h2 className="card-title hover:text-blue-500">{food.name}</h2>
           </Link>
         </div>

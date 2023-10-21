@@ -12,7 +12,8 @@ const UpdateProductPage = () => {
         const productPrice = form.productPrice.value;
         const rating = form.rating.value;
         const productDescription = form.productDescription.value;
-        console.log(productName, productImage, brandName, productType, productPrice, rating, productDescription)
+        const updateProduct = {productName, productImage, brandName, productType, productPrice, rating, productDescription}
+        console.log(updateProduct)
         
     }
     return (

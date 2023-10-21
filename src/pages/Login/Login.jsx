@@ -1,25 +1,111 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from 'react-icons/fa';
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider";
+import Swal from 'sweetalert2'
+import swal from 'sweetalert';
 
 
 const Login = () => {
     const [showPasswordIcon, setShowPasswordIcon] = useState(false);
+    const [signInError, setSignInError] = useState('');
+    const [signInSuccessMessage, setSignInSuccessMessage] = useState('');
+    // const { signIn, googleLogIn, githubLogIn } = useContext(AuthContext);
+    const location = useLocation();
+     const navigate = useNavigate();
 
     const handleLogin = e =>{
         e.preventDefault();
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
+        const newUser = {email, password}
+        console.log({newUser});
+
+        // ::: CONDITION FOR PASSWORD :::
+        if (password.length < 6) {
+          setSignInError("Password should be At least 6 character");
+          swal("Opps !!", signInError, "error");
+          return;    
+        }
+        else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/.test(password)) {
+          setSignInError("Password Should at least one Uppercase, lowercase and number");
+          swal("Opps !!", signInError, "error");
+          return;
+        }
+
+
+        // ::: SIGN IN WITH EMAIL AND PASSWORD :::
+        signIn(email, password)
+        .then(result =>{
+          console.log(result.user)
+          setSignInSuccessMessage('Log in Successful')
+          Swal.fire({
+            title: 'Success',
+            text: 'User added successfully.',
+            icon: 'success',
+            confirmButtonText: 'Okay'
+
+        })
+
+          // ::: NAVIGATING AFTER LOGIN 
+          navigate(location?.state ? location.state : '/');
+          
+        })
+        .catch(error=>{
+          console.error(error)
+          setSignInError("Your email or password is incorrect")
+          Swal.fire({
+            title: 'Error',
+            text: 'Your email or password is incorrect',
+            icon: 'error',
+            confirmButtonText: 'Okay'
+
+        })
+        })
+
+
+
+        // ::: SENDING THE USER DATA TO SERVER SITE :::
+        fetch('https://localhost:5000/users',{
+          method: 'POST',
+          headers: {
+            'content-type': 'application/json'
+        },
+          body: JSON.stringify({newUser})
+        })
+        .then(res=> res.json())
+        .then(data =>{
+          console.log(data)
+        })
     }
     // ::: LOG IN WITH GOOGLE :::
-    const handleGoogleLogin = {
+    const handleGoogleLogin = ()=> {
+      googleLogIn()
+      .then(result =>{
+        console.log(result)
+        setSignInSuccessMessage('Google Log In Successful')
+        swal("Congratulation !!", 'Google Log In Successful' || signInSuccessMessage , "success");
+      })
+      .catch(error=>{
+        setSignInError(error.message)
+        swal("Opps !!", signInError , "error");
+      });
 
-    }
+    };
     
     // LOG IN WITH GITHUB :::
-    const handleGithubLogin = {
+    const handleGithubLogin = ()=> {
+      githubLogIn()
+      .then(result =>{
+        console.log(result)
+        setSignInSuccessMessage('Github Log In Successful')
+        swal("Congratulation !!", 'Github Log In Successful'|| signInSuccessMessage , "success");
+      })
+      .catch(error=>{
+        setSignInError(error.message)
+        swal("Opps !!", signInError , "error");
+      })
 
     }
     return (

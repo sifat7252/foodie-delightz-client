@@ -9,6 +9,7 @@ import Login from "../../pages/Login/Login";
 import Register from "../../pages/Register/Register";
 import AddProductPage from "../../pages/AddProductPage/AddProductPage";
 import UpdateProductPage from "../../pages/UpdateProductPage/UpdateProductPage"
+import BrandProductPage from "../../pages/BrandProductPage/BrandProductPage";
 
   const Routes = createBrowserRouter([
     {
@@ -35,6 +36,10 @@ import UpdateProductPage from "../../pages/UpdateProductPage/UpdateProductPage"
         {
             path: '/updateProduct',
             element: <UpdateProductPage></UpdateProductPage>
+        },
+        {
+          path: '/brandProductPage/:id',
+          element: <BrandProductPage></BrandProductPage>
         }
       ]
     },
