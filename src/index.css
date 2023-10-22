@@ -23,3 +23,25 @@
     background-position: center;
     background-size: cover;
 }
+
+/* advertise cover photo */
+.bg-cover-image4 {
+    background-image: url(https://i.ibb.co/rZdrxF2/photo-1589879171634-dc628cc021f9-auto-format-fit-max-q-80-blend-000000-blend-alpha-10-blend-mode-nor.jpghttps://i.ibb.co/Trt564f/Restaurant-Food-Menu-Cover-Flyer-Design-PSD.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.bg-cover-image3 {
+    background-image: url(https://i.ibb.co/hCpRmRr/431.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.bg-cover-image2 {
+    background-image: url(https://i.ibb.co/j6WH79W/timothy-barlin-a7l71i87vd-Y-unsplash-e1596452442610.webp);
+    background-position: center;
+    background-size: cover;
+}
+.bg-cover-image1 {
+    background-image: url(https://i.ibb.co/k375hPP/photo-1509456592530-5d38e33f3fdd-auto-format-fit-max-q-80-blend-000000-blend-alpha-10-blend-mode-nor.jpg);
+    background-position: center;
+    background-size: cover;
+}
