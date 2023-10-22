@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const BrandProduct = ({ food }) => {
     console.log(food)
@@ -52,3 +53,6 @@ brandName
 };
 
 export default BrandProduct;
+BrandProduct.propTypes = {
+    food: PropTypes.node,
+  };

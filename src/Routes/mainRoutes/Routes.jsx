@@ -11,6 +11,7 @@ import AddProductPage from "../../pages/AddProductPage/AddProductPage";
 import UpdateProductPage from "../../pages/UpdateProductPage/UpdateProductPage"
 import BrandProductPage from "../../pages/BrandProductPage/BrandProductPage";
 import DetailsPage from "../../pages/DetailsPage/DetailsPage";
+import AddToCartPage from "../../pages/AddToCartPage/AddToCartPage";
 
   const Routes = createBrowserRouter([
     {
@@ -46,6 +47,10 @@ import DetailsPage from "../../pages/DetailsPage/DetailsPage";
         {
           path: '/detailsPage',
           element: <DetailsPage></DetailsPage>
+        },
+        {
+          path: '/addToCartPage',
+          element: <AddToCartPage></AddToCartPage>
         }
       ]
     },

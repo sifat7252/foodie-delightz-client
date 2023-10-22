@@ -1,16 +1,20 @@
 import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../Providers/AuthProvider";
+
 import Swal from 'sweetalert2'
 import swal from 'sweetalert';
+import { AuthContext } from "../../Providers/AuthProvider";
 
 
 const Login = () => {
+
+  const { signIn, googleLogIn, githubLogIn } = useContext(AuthContext);
+
     const [showPasswordIcon, setShowPasswordIcon] = useState(false);
     const [signInError, setSignInError] = useState('');
     const [signInSuccessMessage, setSignInSuccessMessage] = useState('');
-    // const { signIn, googleLogIn, githubLogIn } = useContext(AuthContext);
+    
     const location = useLocation();
      const navigate = useNavigate();
 

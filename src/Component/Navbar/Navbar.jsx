@@ -19,7 +19,7 @@ const Navbar = () => {
         </Link>
       </li>
       <li className="p-1 font-sans text-sm md:text-base lg:text-base text-black lg:font-semibold md:font-medium font-normal     text-transparent bg-clip-text   bg-gradient-to-r from-violet-500 to-blue-900">
-        <Link to={"/myCart"} className="flex items-center">
+        <Link to={"/addToCartPage"} className="flex items-center">
           My Cart
         </Link>
       </li>

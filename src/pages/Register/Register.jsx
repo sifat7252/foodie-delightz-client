@@ -3,9 +3,10 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import swal from "sweetalert";
+import Swal from 'sweetalert2'
 
 const Register = () => {
-  // const {createUser} = useContext(AuthContext);
+  const { createUser } = useContext(AuthContext);
     const [showPasswordIcon, setShowPasswordIcon] = useState(false);
     
     const [registerError, setRegisterError] = useState("");
@@ -28,17 +29,38 @@ const Register = () => {
 
         if (password.length < 6) {
           setRegisterError("Password should be At least 6 character");
-          swal("Opps !!", registerError, "error");
+          // swal("Opps !!", registerError, "error");
+          Swal.fire({
+            title: 'Opps!!',
+            text: registerError,
+            icon: 'error',
+            confirmButtonText: 'Okay'
+
+        })
           return;    
         }
         else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/.test(password)) {
           setRegisterError("Password Should at least one Uppercase, lowercase and number");
-          swal("Opps !!", registerError, "error");
+          // swal("Opps !!", registerError, "error");
+          Swal.fire({
+            title: 'Opps!!',
+            text: registerError,
+            icon: 'error',
+            confirmButtonText: 'Okay'
+
+        })
           return;
         } 
         else if (!accepted) {
           setRegisterError("You must be checked out term and policies");
-          swal("Opps !!", registerError, "error");
+          // swal("Opps !!", registerError, "error");
+          Swal.fire({
+            title: 'Opps!!',
+            text: registerError,
+            icon: 'error',
+            confirmButtonText: 'Okay'
+
+        })
           return;
         }
 
@@ -122,7 +144,7 @@ const Register = () => {
               <input
                 type="checkbox" name="checkbox"
                 className="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-blue-gray-200 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-blue-900 checked:bg-blue-900 checked:before:bg-blue-900 hover:before:opacity-10"
-                id="checkbox"
+                id="checkbox" required
               />
               <span className="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100">
                 <svg
