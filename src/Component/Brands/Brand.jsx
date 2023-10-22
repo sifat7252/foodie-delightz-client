@@ -19,7 +19,7 @@ const Brand = ({brand}) => {
           data-aos-offset="500"
           data-aos-duration="1500"
         >
-          <Link to={`/brandProductPage/${brand.id}`}>
+          <Link to={`/brandProductPage/${brand.brand_name}`}>
             <h2 className="card-title hover:text-blue-500">{brand.brand_name}</h2>
           </Link>
         </div>

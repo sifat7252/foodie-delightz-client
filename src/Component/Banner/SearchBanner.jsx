@@ -2,7 +2,7 @@ const SearchBanner = () => {
   return (
     <div>
       <div
-        className="hero min-h-screen"
+        className="hero mx-auto lg:h-[70vh]"
         style={{
           backgroundImage:
             "url(https://i.ibb.co/9N7MGSc/photo-1504754524776-8f4f37790ca0-auto-format-fit-max-q-80-blend-000000-blend-alpha-10-blend-mode-nor.jpg)",
@@ -21,10 +21,10 @@ const SearchBanner = () => {
                   name="search"
                   placeholder="Search Here...."
                   id=""
-                  className="h-10 lg:w-full p-3 rounded-lg "
+                  className="h-10 lg:w-full  p-3 rounded-lg "
                 />
               </div>
-              <div className="relative bottom-10 left-20 lg:left-52">
+              <div className="relative bottom-10 left-20 lg:left-[36%]">
                 <button className="btn-primary rounded-r-lg h-10 w-16 lg:w-32 lg:h-10">
                   Search
                 </button>
@@ -32,8 +32,7 @@ const SearchBanner = () => {
             </div>
 
             <p className="mb-5">
-              We believe the test of all Brander foods. Cooking is all about
-              people. Food is maybe the only universal thing that really has the
+              Food is maybe the only universal thing that really has the
               power to bring everyone together. No matter what culture,
               everywhere around the world, people get together to eat. - Guy
               Fieri{" "}

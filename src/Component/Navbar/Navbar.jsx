@@ -34,7 +34,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="navbar w-11/12   mx-auto">
+      <div className="navbar w-11/12 bg-red-400  mx-auto">
         <div className="navbar-start sm:flex justify-between ">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -64,7 +64,7 @@ const Navbar = () => {
             <img
               src="https://i.ibb.co/BqrMv41/logo-no-background.png"
               alt="logo"
-              className="lg:h-24 lg:w-28 h-14 p-2 relative "
+              className="lg:h-24 lg:w-28 h-14 w-16 p-2 relative "
             />
           </div>
           {/* <Link className="btn btn-ghost normal-case text-xl border-2 flex border-blue-600 -ml-9">daisyUI</Link> */}

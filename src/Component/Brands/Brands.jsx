@@ -3,15 +3,24 @@ import Brand from './Brand';
 
 const Brands = () => {
     const [brands, setBrands] = useState();
+    // const [brandProduct, setBrandProduct] = useState();
+    // ::: USE EFFECT FOR THE BRAND LOGO:::
     useEffect(() => {
         fetch("/brand.json")
           .then((res) => res.json())
           .then((data) => setBrands(data));
       }, []);
       // console.log(brands);
+      // // ::: USE EFFECT FOR THE PRODUCTS :::
+      // useEffect(()=>{
+      //   fetch('http://localhost:5000/product')
+      //   .then((res) => res.json())
+      //   .then((data)=>setBrandProduct(data))
+      // },[]) 
+      // console.log(brandProduct)
     return (
         <div>
-            <div className='mb-5'>
+            <div className='mb-5  mx-auto'>
         <div className=" flex flex-col items-center justify-center item-center mx-auto ">
           <h2
             className="font-semibold lg:text-5xl text-xl md:text-4xl text-transparent bg-clip-text   bg-gradient-to-r from-blue-900 to-blue-500 lg:my-4 p-3"

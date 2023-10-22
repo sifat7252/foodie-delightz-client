@@ -13,7 +13,7 @@ const CustomerComments = () => {
     // console.log(customerData)
     return (
         <div>
-            <div className=" flex flex-col items-center justify-center item-center mx-auto ">
+            <div className=" flex flex-col items-center justify-center item-center w-11/12 mx-auto ">
                 
                 <h2 className="font-semibold lg:text-5xl text-xl md:text-4xl text-transparent bg-clip-text   bg-gradient-to-r from-blue-900 to-blue-500 lg:my-4 p-3" data-aos="fade-left"
      data-aos-anchor="#example-anchor"
@@ -26,7 +26,7 @@ const CustomerComments = () => {
      data-aos-duration="500">Our Happy Customers Leave Their Valuable Comments</h2>
                 <hr />
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-[93%] mx-auto ">
                 {
                     customerData?.map(customer=><Customer key={customer.id} customer={customer}></Customer>)
                 }

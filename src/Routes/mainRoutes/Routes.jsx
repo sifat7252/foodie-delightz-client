@@ -10,6 +10,7 @@ import Register from "../../pages/Register/Register";
 import AddProductPage from "../../pages/AddProductPage/AddProductPage";
 import UpdateProductPage from "../../pages/UpdateProductPage/UpdateProductPage"
 import BrandProductPage from "../../pages/BrandProductPage/BrandProductPage";
+import DetailsPage from "../../pages/DetailsPage/DetailsPage";
 
   const Routes = createBrowserRouter([
     {
@@ -19,7 +20,8 @@ import BrandProductPage from "../../pages/BrandProductPage/BrandProductPage";
       children: [
         {
             path:'/',
-            element: <Home></Home>
+            element: <Home></Home>,
+            loader: () => fetch('http://localhost:5000/product')
         },
         {
             path: '/login',
@@ -40,6 +42,10 @@ import BrandProductPage from "../../pages/BrandProductPage/BrandProductPage";
         {
           path: '/brandProductPage/:id',
           element: <BrandProductPage></BrandProductPage>
+        },
+        {
+          path: '/detailsPage',
+          element: <DetailsPage></DetailsPage>
         }
       ]
     },
