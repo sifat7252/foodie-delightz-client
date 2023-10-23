@@ -1,8 +1,42 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import Swal from "sweetalert2";
+
 
 
 const CartPage = ({cart}) => {
+  const {_id } = cart ;
+  const handleDelete = (_id) =>{
+    console.log(_id);
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+
+        
+        fetch(`http://localhost:5000/myCart/${_id}`, {
+          method: 'DELETE'
+        })
+        .then(res=> res.json())
+        .then(data => {
+          console.log(data)
+          if(data.deletedCount > 0){
+            Swal.fire(
+              'Deleted!',
+              'Your file has been deleted.',
+              'success'
+            )
+          }
+        })
+      }
+    })
+  }
     return (
         <div className="">
             <div className="w-11/12  mx-auto">
@@ -46,7 +80,7 @@ brandName}
             data-aos-anchor="#example-anchor"
             data-aos-offset="500"
             data-aos-duration="1000">Order</button></Link>
-            <Link><button className="btn btn-outline text-white bg-lime-500 btn-xs sm:btn-sm md:btn-md lg:btn-lg" data-aos="fade-left"
+            <Link onClick={()=> handleDelete(_id)}><button className="btn btn-outline text-white bg-lime-500 btn-xs sm:btn-sm md:btn-md lg:btn-lg" data-aos="fade-left"
             data-aos-anchor="#example-anchor"
             data-aos-offset="500"
             data-aos-duration="1000">Delete</button></Link>

@@ -17,7 +17,7 @@ const Customer = ({customer}) => {
 
 export default Customer;
 Customer.propTypes = {
-    customer: PropTypes.node,
+    customer: PropTypes.node
     
   };
 

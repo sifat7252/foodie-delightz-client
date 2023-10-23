@@ -1,16 +1,19 @@
-import { useEffect, useState } from "react";
+
 import BrandProduct from "./BrandProduct";
+import { useLoaderData } from "react-router-dom";
 
 
 const BrandProductPage = () => {
-  const [brandProduct, setBrandProduct] = useState();
+  
   // // ::: USE EFFECT FOR THE PRODUCTS :::
-  useEffect(()=>{
-    fetch('http://localhost:5000/product')
-    .then((res) => res.json())
-    .then((data)=>setBrandProduct(data))
-  },[]) 
-  console.log(brandProduct)
+  // useEffect(()=>{
+  //   fetch('http://localhost:5000/product')
+  //   .then((res) => res.json())
+  //   .then((data)=>setBrandProduct(data))
+  // },[]) 
+  const brand = useLoaderData();
+  // console.log(brand);
+  // console.log(brandProduct)
     return (
         <div>
             <div className="lg:h-[70vh]">
@@ -63,13 +66,13 @@ const BrandProductPage = () => {
             data-aos-offset="500"
             data-aos-duration="500"
           >
-            Select Your Choise Item From Here{" "}
+            Select Your Choice Item From Here{" "}
           </h2>
           <hr />
         </div>
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-5">
         {
-          brandProduct?.map((food) => <BrandProduct key={food._id} food={food}></BrandProduct>)
+          brand?.map((food) => <BrandProduct key={food._id} food={food}></BrandProduct>)
         }
         </div>
         </div>

@@ -4,9 +4,10 @@ import CartPage from "./CartPage";
 
 const AddToCartPage = () => {
     const [myCart, setMyCart] = useState();
+    
     // // ::: USE EFFECT FOR THE PRODUCTS :::
   useEffect(()=>{
-    fetch('http://localhost:5000/product')
+    fetch('http://localhost:5000/myCart')
     .then((res) => res.json())
     .then((data)=>setMyCart(data))
   },[]) 

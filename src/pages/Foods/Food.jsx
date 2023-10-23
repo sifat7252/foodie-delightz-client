@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const BrandProduct = ({ food }) => {
-  const { _id } = food || {};
-    // console.log(food._id)
-  return (
-    <div>
-      <div className="card lg:card-side bg-gradient-to-b lg:bg-gradient-to-r from-sky-500 to-teal-100 shadow-xl p-5 lg:p-10">
+
+const Food = ({ food }) => {
+    return (
+        <div>
+            <div className="card lg:card-side bg-gradient-to-b lg:bg-gradient-to-r from-sky-500 to-teal-100 shadow-xl p-5 lg:p-10">
         <figure>
           <img src={food.productImage} alt="Food" className="lg:h-96 h-56 lg:w-80 rounded-2xl" />
         </figure>
@@ -37,25 +36,23 @@ brandName
             data-aos-offset="500"
             data-aos-duration="1000"><span className="">Price : $</span><span className="">{food.productPrice} </span></div>
           </div>
-          <div className="card-actions justify-around items-center my-3">
-           <Link to={`/detailPage/${food._id}`} > <button className="btn  btn-outline text-white bg-violet-500 btn-xs sm:btn-sm md:btn-md lg:btn-lg" data-aos="fade-right"
+          <div className="card-actions justify-center items-center my-3">
+           <Link to={`/detailsPage/`}> <button className="btn  btn-outline text-white bg-violet-500 btn-xs sm:btn-sm md:btn-md lg:btn-lg" data-aos="fade-right"
             data-aos-anchor="#example-anchor"
             data-aos-offset="500"
             data-aos-duration="1000">Details</button></Link>
-            <Link to={`/updateProduct/${_id}`}><button className="btn btn-outline text-white bg-lime-500 btn-xs sm:btn-sm md:btn-md lg:btn-lg" data-aos="fade-left"
+            {/* <Link to={'/updateProduct'}><button className="btn btn-outline text-white bg-lime-500 btn-xs sm:btn-sm md:btn-md lg:btn-lg" data-aos="fade-left"
             data-aos-anchor="#example-anchor"
             data-aos-offset="500"
-            data-aos-duration="1000">Update</button></Link>
+            data-aos-duration="1000">Update</button></Link> */}
           </div>
         </div>
       </div>
-    </div>
-  );
+        </div>
+    );
 };
 
-export default BrandProduct;
-BrandProduct.propTypes = {
+export default Food;
+Food.propTypes = {
     food: PropTypes.node,
   };
-
-  // to={`/detailsPage/${food._id}`}

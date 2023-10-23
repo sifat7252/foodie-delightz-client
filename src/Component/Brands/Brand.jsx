@@ -30,5 +30,5 @@ const Brand = ({brand}) => {
 
 export default Brand;
 Brand.propTypes ={
-    brand: PropTypes.node,
+    brand: PropTypes.node
 }

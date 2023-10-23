@@ -10,8 +10,11 @@ import Register from "../../pages/Register/Register";
 import AddProductPage from "../../pages/AddProductPage/AddProductPage";
 import UpdateProductPage from "../../pages/UpdateProductPage/UpdateProductPage"
 import BrandProductPage from "../../pages/BrandProductPage/BrandProductPage";
-import DetailsPage from "../../pages/DetailsPage/DetailsPage";
+// import DetailsPage from "../../pages/DetailsPage/DetailsPage";
 import AddToCartPage from "../../pages/AddToCartPage/AddToCartPage";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import Foods from "../../pages/Foods/Foods";
+import DetailPage from "../../pages/DetailsPage/DetailPage";
 
   const Routes = createBrowserRouter([
     {
@@ -34,24 +37,43 @@ import AddToCartPage from "../../pages/AddToCartPage/AddToCartPage";
         },
         {
             path: '/addProduct',
-            element: <AddProductPage></AddProductPage>
+            element: <PrivateRoute><AddProductPage></AddProductPage></PrivateRoute>
         },
         {
-            path: '/updateProduct',
-            element: <UpdateProductPage></UpdateProductPage>
+            path: '/updateProduct/:id',
+            element: <PrivateRoute><UpdateProductPage></UpdateProductPage></PrivateRoute>,
+            loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
         },
         {
-          path: '/brandProductPage/:id',
-          element: <BrandProductPage></BrandProductPage>
+          
         },
         {
-          path: '/detailsPage',
-          element: <DetailsPage></DetailsPage>
+          path: '/brandProductPage/:brandName',
+          element: <PrivateRoute><BrandProductPage></BrandProductPage></PrivateRoute>,
+          loader: ({params}) => fetch(`http://localhost:5000/brand/${params.brandName}`)
+
         },
+        // {
+        //   path: '/detailsPage/:id',
+        //   element: <PrivateRoute><DetailsPage></DetailsPage></PrivateRoute>,
+        //   // loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
+        //   loader: () => fetch ('http://localhost:5000/product')
+        // },
         {
           path: '/addToCartPage',
-          element: <AddToCartPage></AddToCartPage>
-        }
+          element: <PrivateRoute><AddToCartPage></AddToCartPage></PrivateRoute>,
+          loader: () => fetch('http://localhost:5000/myCart')
+        },
+        {
+          path: '/foods',
+          element: <Foods></Foods>
+        },
+        {
+          path: '/detailPage/:id',
+          element: <PrivateRoute><DetailPage></DetailPage></PrivateRoute>,
+          loader: () => fetch ('http://localhost:5000/product')
+        },
+
       ]
     },
   ]);

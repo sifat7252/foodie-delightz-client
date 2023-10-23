@@ -32,7 +32,7 @@ const Register = () => {
           // swal("Opps !!", registerError, "error");
           Swal.fire({
             title: 'Opps!!',
-            text: registerError,
+            text: "Password should be At least 6 character" || registerError,
             icon: 'error',
             confirmButtonText: 'Okay'
 
@@ -44,7 +44,7 @@ const Register = () => {
           // swal("Opps !!", registerError, "error");
           Swal.fire({
             title: 'Opps!!',
-            text: registerError,
+            text: "Password Should at least one Uppercase, lowercase and number" || registerError,
             icon: 'error',
             confirmButtonText: 'Okay'
 
@@ -69,7 +69,7 @@ const Register = () => {
         .then(result => {
           setSuccessMessage("New User Created Successfully")
           console.log(result.user)
-          swal("Congratulation !!", successMessage , "success");
+          swal("Congratulation !!", "New User Created Successfully" || successMessage , "success");
         })
         .catch(error =>{
           console.error(error)

@@ -2,6 +2,7 @@ import Swal from 'sweetalert2'
 
 const AddProductPage = () => {
     
+    
     const handleAddProduct = event =>{
         event.preventDefault();
         const form = event.target;

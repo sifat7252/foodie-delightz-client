@@ -115,16 +115,19 @@ const Login = () => {
     return (
         <div>
             <div className="flex justify-center items-center mt-8">
-        <div className="relative flex flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-xl p-5 " data-aos="flip-left"
+        <div className="relative  lg:w-1/2 mx-auto lg:flex flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-xl p-5 " data-aos="flip-left"
      data-aos-easing="ease-out-cubic"
      data-aos-duration="1000">
-        <div className="flex justify-center items-center"><img src="https://i.ibb.co/BqrMv41/logo-no-background.png" alt="" className="h-20 " /></div>
+        <div className="flex  justify-center items-center"><img src="https://i.ibb.co/BqrMv41/logo-no-background.png" alt="" className="h-20 " /></div>
+          <div className=" flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-start ">
           <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased text-transparent bg-clip-text  bg-gradient-to-r from-blue-900 to-blue-500">
             Log In
           </h4>
           <p className="mt-1 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
             Enter your Email and Password for log in.
           </p>
+          </div>
           <form onSubmit={handleLogin} className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
             <div className="mb-4 flex flex-col gap-6">
               
@@ -177,6 +180,7 @@ const Login = () => {
                 <button onClick={handleGithubLogin} className='btn btn-outline flex text-black-500 w-full m-2 mx-auto'><FaGithub></FaGithub> Github LogIn</button>
             </div>
           </form>
+          </div>
         </div>
       </div>
         </div>

@@ -31,5 +31,5 @@ const Food = ({ food }) => {
 
 export default Food;
 Food.propTypes = {
-  food: PropTypes.node,
+  food: PropTypes.node
 };
