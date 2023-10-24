@@ -4,10 +4,11 @@ import Swal from "sweetalert2";
 
 
 
-const CartPage = ({cart}) => {
+const CartPage = ({cart, myCart, setMyCart }) => {
+  // console.log(cart)
   const {_id } = cart ;
   const handleDelete = (_id) =>{
-    console.log(_id);
+    // console.log(_id);
     Swal.fire({
       title: 'Are you sure?',
       text: "You won't be able to revert this!",
@@ -29,9 +30,11 @@ const CartPage = ({cart}) => {
           if(data.deletedCount > 0){
             Swal.fire(
               'Deleted!',
-              'Your file has been deleted.',
+              'Your Cart has been deleted.',
               'success'
             )
+            const remainingCart = myCart.filter(cart => cart._id !== _id);
+            setMyCart(remainingCart);
           }
         })
       }
@@ -97,4 +100,6 @@ brandName}
 export default CartPage;
 CartPage.propTypes = {
     cart: PropTypes.node,
+    myCart: PropTypes.node,
+    setMyCart: PropTypes.node,
   };

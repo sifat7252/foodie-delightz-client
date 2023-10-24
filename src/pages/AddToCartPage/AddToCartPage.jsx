@@ -4,6 +4,7 @@ import CartPage from "./CartPage";
 
 const AddToCartPage = () => {
     const [myCart, setMyCart] = useState();
+    // console.log(myCart);
     
     // // ::: USE EFFECT FOR THE PRODUCTS :::
   useEffect(()=>{
@@ -39,7 +40,7 @@ const AddToCartPage = () => {
         <div className="grid grid-cols-3">
         <div className="grid grid-cols-1 col-span-2 gap-5">
             {
-                myCart?.map((cart)=><CartPage key={cart._id} cart={cart}></CartPage>)
+                myCart?.map((cart)=><CartPage key={cart._id} myCart={myCart} setMyCart={setMyCart} cart={cart}></CartPage>)
             }
         </div>
         <div className="cart-checkout col-span-1">
@@ -47,12 +48,12 @@ const AddToCartPage = () => {
             <div className="">
             <h3 className="remaining-time font-bold text-sm lg:text-2xl m-5 text-blue-600 flex items-center justify-center">Order Summary</h3>
             <div className="flex justify-between">
-                <h2 className="">Subtotal (0 item)</h2>
+                <h2 className="flex">Subtotal  item</h2>
                 <h2 className="">$ <span>price</span></h2>
             </div>
             <div className="flex justify-between">
                 <h2 className="">Shipping Fee</h2>
-                <h2 className="">$ <span>price</span></h2>
+                <h2 className="">$ price</h2>
             </div>
             
             <hr className=" border-1 border-gray-400 m-5"/>

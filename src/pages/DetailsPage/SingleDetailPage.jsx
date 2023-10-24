@@ -3,16 +3,20 @@ import PropTypes from "prop-types";
 import Swal from "sweetalert2";
 
 const SingleDetailPage = ({ food }) => {
-    const { _id } = food ;
+    // console.log(food);
+    const { _id } = food;
     const handleAddToCart = (_id) =>{
         fetch('http://localhost:5000/myCart', {
             method: 'POST',
-            body: JSON.stringify()
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(food)
         })
         .then(res=> res.json())
         .then(data=> {
             console.log(data)
-            if(data.insertedId){
+        if(data.insertedId){
                 Swal.fire({
                     title: 'Success',
                     text: 'Add to cart successfully.',

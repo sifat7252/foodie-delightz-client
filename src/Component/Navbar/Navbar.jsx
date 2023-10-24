@@ -124,6 +124,7 @@ const Navbar = () => {
         <div className="navbar-end  items-center grid grid-cols-5  justify-center">
           <div className="lg:px-10 bg-sky-100 lg:p-2  rounded-full grid grid-cols-1 lg:grid-cols-5 justify-center items-center   col-span-4">
             <div className="user-name lg:col-span-3 mb-1 flex justify-center ">
+              
               <h2 className="text-xs lg:text-xl lg:font-semibold italic text-blue-400">{user?.displayName}</h2>
             </div>
             <div className="ml-14  lg:col-span-2">

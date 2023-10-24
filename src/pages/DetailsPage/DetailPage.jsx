@@ -5,6 +5,7 @@ import SingleDetailPage from "./SingleDetailPage";
 
 const DetailPage = () => {
     const [singleProduct, setSingleProduct] = useState();
+
     const products = useLoaderData();
     // console.log(products)
     const {id } = useParams();
@@ -21,9 +22,12 @@ const DetailPage = () => {
             
         <div className="">
             {
-                singleProduct?.map(food => <SingleDetailPage key={food._id} food={food}></SingleDetailPage>)
+                singleProduct?.map(food => <SingleDetailPage key={food._id}  food={food}></SingleDetailPage>)
+                
             }
+            
         </div>
+        
         </div>
     );
 };
